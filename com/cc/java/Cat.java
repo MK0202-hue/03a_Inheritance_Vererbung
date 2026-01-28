@@ -4,7 +4,9 @@ public class Cat {
 
   private String firstName;
   private String furColor;
-  private int age; 
+  private int age;
+
+  private int counter;
 
   public Cat(String firstName, String furColor, int age) {
     this.firstName = firstName;
@@ -24,8 +26,26 @@ public class Cat {
   }
 
   public String getAge() {
-    return String.valueOf(age);
+      return checkCompliance();
   }
+
+private String checkCompliance(){
+
+         counter++;
+
+        switch (counter) {
+            case 1:
+                return "This is an inappropriate question!"; // 1st time
+            case 2:
+                return "I've told you once!"; // 2nd time
+            case 3:
+                return "Talk to the hand!"; // 3rd time 
+            default:
+                return "1#!?&&%"; //4th ++
+        }
+}
+
+
 
 }
   
